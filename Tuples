@@ -1,0 +1,13 @@
+if __name__ == '__main__':
+    n = int(raw_input())
+    integer_list = map(int, raw_input().split())
+    
+    #Note: This assignement of hackerRank only works on Python 2
+    
+    #Create a new tuple with the line of integer named integer_list
+    
+    New_tuple = tuple(integer_list)
+    
+    #Print the hash with the print function and the hash() function
+    
+    print(hash(New_tuple))
