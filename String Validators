@@ -1,0 +1,13 @@
+if __name__ == '__main__':
+    s = input()
+    
+    # char.isalum() for char is s = return true if a character in
+    #s is of the type alphanumeric.  any() means any character in s
+    #If in any character char in s, char is of the alphanumeric type the program
+    #return true if not it return FALSE. Same idea for the rest of the code.
+    
+    print(any(char.isalnum() for char in s))
+    print(any(char.isalpha() for char in s))
+    print(any(char.isdigit() for char in s))
+    print(any(char.islower() for char in s))
+    print(any(char.isupper() for char in s))
