@@ -1,0 +1,22 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+#Read N and M  and convert them to int
+N, M = map(int, input().split())
+
+#start with the pattern in the center .|. and 
+#print the dash symbol until you reach N time.
+# Top half
+for i in range(N // 2):
+    pattern = ".|." * (2 * i + 1)
+    print(pattern.center(M, "-"))
+
+# Write the string welcome in the center
+#and add dashes until you reach M
+# Middle
+print("WELCOME".center(M, "-"))
+
+#Do the reverse of the first iteration.  
+# Bottom half
+for i in range(N // 2 - 1, -1, -1):
+    pattern = ".|." * (2 * i + 1)
+    print(pattern.center(M, "-"))
