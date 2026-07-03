@@ -17,4 +17,4 @@ def merge_the_tools(string, k):
         
         #Print the result
         print(result)
-    # your code goes here
+     # your code goes here
