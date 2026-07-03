@@ -1,0 +1,22 @@
+import string
+
+#string.ascii_lowercase    Gives "abcdefghijklmnopqrstuvwxyz"
+#join()    Inserts - between letters
+#center()    Centers every row with -
+#range()    Controls the loops
+#[::-1]    Reverses a list
+
+def print_rangoli(size):
+    alpha = string.ascii_lowercase
+    width = 4 * size - 3
+
+    rows = []
+
+    for i in range(size):
+        left = alpha[size-1:i:-1]
+        right = alpha[i:size]
+        row = "-".join(left + right)
+        rows.append(row.center(width, "-"))
+
+    print("\n".join(rows[::-1] + rows[1:]))
+    # your code goes here
