@@ -1,6 +1,0 @@
-# Complete the solve function below.
-def solve(s):
-    #s.split : split the string s into single word
-    #word.capitalize() : capitalize the first letter of each word of the list
-    #" ".join : join each separate word to form a single string
-    return " ".join(word.capitalize() for word in s.split())
