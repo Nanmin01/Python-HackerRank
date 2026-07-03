@@ -1,0 +1,20 @@
+def merge_the_tools(string, k):
+    
+    #set the for loop starting with 0 end with length of the string with k steps. 
+    for i in range(0, len(string), k):
+        
+        #the substring is the string starting with position i and ennding with position i+k
+        substring = string[i:i+k]
+        
+        #Set result as a character variable
+        result = ""
+        
+        # ch is a CHARACTER IN substring. The if statement is there
+        #to avoid duplicate do the expression " not in " 
+        for ch in substring:
+            if ch not in result:
+                result += ch
+        
+        #Print the result
+        print(result)
+    # your code goes here
