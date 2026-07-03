@@ -1,0 +1,16 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the solve function below.
+def solve(s):
+    #Use the function .title() to uppercase all first character of any word 
+    #of thee string s
+    s = s.title()
+    
+    #Use return instead of print statement to return the string
+    return s
