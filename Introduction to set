@@ -1,0 +1,10 @@
+def average(array):
+    # your code goes here
+    
+    #turn the array into a set of distinct numbers
+    distinct_set = set(array)
+    
+    #add the number in the set using sum() function
+    #find the length using len() function
+    #divide and round to the thrid decimal place
+    return round(sum(distinct_set) / len(distinct_set), 3)
