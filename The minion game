@@ -1,0 +1,29 @@
+def minion_game(string):
+    # your code goes here
+    
+    #Set kevin and stuart to 0 and find the lenght of the string parameter
+    kevin = 0
+    stuart = 0
+    n = len(string)
+
+    #initialize the vowels as a string
+    vowels = "AEIOU"
+
+    #set the for loop starting from i to the length of the string
+    for i in range(n):
+    
+        #if the string start with a vowel it goes to kevin and else it count for stuart
+        if string[i] in vowels:
+            kevin += n - i
+        else:
+            stuart += n - i
+    
+    #Print the result
+    if kevin > stuart:
+        print("Kevin", kevin)
+
+    elif stuart > kevin:
+        print("Stuart", stuart)
+
+    else:
+        print("Draw")
