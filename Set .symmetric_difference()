@@ -1,0 +1,22 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+#read the first input and store it into n
+n = int(input())
+
+#read the list of input and store it as a set of integer and store it into
+#num_stud_eng = is the set of number of student who have subcribed to the english 
+#newspaper
+num_stud_eng = set(map(int, input().split()))
+
+#read the input() and store it inside b
+b = int(input())
+
+#Read the list of numbers as a set of int and store it into num_stud_fren
+#num_stud_fren = set of number of student who subscribed to the French
+#newspaper
+num_stud_fren = set(map(int, input().split()))
+
+#print the length of the .symmetric_difference() of the two set
+#the length of the two set is the total number of subscription
+#to the english or the french newspaper 
+print(len(num_stud_eng^num_stud_fren))
