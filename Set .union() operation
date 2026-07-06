@@ -1,0 +1,20 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+#read the  number of student who have subscribed to the English newspaper
+n = int(input())
+
+#input the roll number of  English student into a set of int in the variable 
+#num_stud_eng
+num_stud_eng = set(map(int, input().split()))
+
+#do the same for b the number of student that subscribed in french
+b = int(input())
+
+#read the french rool number of student  into a set of int
+#and store them into num_stud_fren
+num_stud_fren = set(map(int, input().split()))
+
+#print the len of the union " |" between the two set
+#you do not need b and n
+#the length is the number of distinct students.
+print(len(num_stud_eng|num_stud_fren))
