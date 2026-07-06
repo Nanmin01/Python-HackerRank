@@ -1,0 +1,16 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+#Use input to load the first integer to n
+# use map to load the separated integer line into first_set as a set.breakpoint
+#We use .split because the integer are separated in a line
+n = int(input())
+first_set = set(map(int, input().split()))
+
+#We do the same for m and the second set
+m = int(input())
+second_set = set(map(int, input().split()))
+
+#we use " ^ " between 2 set to find the symmetric difference.
+#sorted() is to sort in increasing order
+for sym_diff in sorted(first_set ^ second_set):
+    print(sym_diff)
