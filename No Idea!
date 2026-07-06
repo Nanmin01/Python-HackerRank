@@ -1,0 +1,30 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+#Read using input() function to read the two integer n and m 
+#using the map(int, inout().split())
+n , m = map(int, input().split())
+
+#Read the second line in an array using a list into the array variable
+array = list(map(int, input().split()))
+
+#Read the first and the second set using the set() function
+first_set = set(map(int, input().split()))
+second_set = set(map(int, input().split()))
+
+
+#idea: First we set happiness to 0
+#Choose a number in the array (for number in array)
+# if that number belong to the first set happiness is incremented to 1
+# same if it belong to the second set happiness is decremented -1
+# else = contine with the next number
+happiness = 0
+for number in array:
+    if number in first_set:
+        happiness += 1
+    elif number in second_set:
+        happiness -= 1
+    else:
+        continue
+
+#Print happiness at the end
+print(happiness)
