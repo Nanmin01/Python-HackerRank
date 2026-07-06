@@ -1,0 +1,15 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+#Import the itertools libraries so we can use product
+#which find the cartesian product of the 2 set 
+from itertools import product
+
+#The two set can be a lists or a tuple
+#read the 2 separates line and store it into A and B
+#as a integer tuple
+A = tuple(map(int, input().split()))
+B = tuple(map(int, input().split()))
+
+# the * before the product clear the extra parenthesis
+#and print the tuple as separates point (x,y)
+print(*product(A,B))
