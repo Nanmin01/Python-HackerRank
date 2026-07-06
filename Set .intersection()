@@ -1,0 +1,22 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+#Read the first input and store it in n
+#n = number of student who have subscribed to English
+n = int(input())
+
+#Read the input as a set of int and store them into num_stud_eng
+#num_stud_eng = roll numbers of students in the English newspaper set
+num_stud_eng = set(map(int, input().split()))
+
+#Read the third line of input and store it in b
+#b = is the number of student in French
+b = int(input())
+
+#Read the 4th line of input and store it in num_stud_fren
+#num_stud_fren = is the set of integer of roll number in French
+num_stud_fren = set(map(int, input().split()))
+
+#Print the length of the intersection "&" of both set
+#the length of the intersection is the number of student 
+#that have both french and english
+print(len(num_stud_eng&num_stud_fren))
