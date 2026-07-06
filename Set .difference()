@@ -1,0 +1,20 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+#read the first input and store it in n
+n = int(input())
+
+#read the list of input into a set of integer and store them into
+#num_stud_eng = number of student who  have subcribed to the English newspaper
+num_stud_Eng = set(map(int, input().split()))
+
+#read the thrid input and store it in b 
+b = int(input())
+
+#read the last list of input into the set of integer and store them in
+#num_stud_fren = number of student who have subscribed to the French Newspaper
+num_stud_fren = set(map(int, input().split()))
+
+#print the length of the difference of the two set
+#The length is the total number of students who are subscribed to the 
+#English newspaper 
+print(len(num_stud_Eng-num_stud_fren))
