@@ -1,0 +1,18 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+#Always convert the input to an integer if the prompt
+#stated that the variable is an integer with in() function
+n = int(input())
+
+#initialise the name_set to an empty set
+name_set = set() 
+
+#use for loop to read the input on separated line
+#using the add() function for a set, add each 
+#unique input to the set without dupplicate
+for number in range (n):
+    name_set.add(input())
+   
+#Print the lenght of the new unique set
+#the length is the number of unique country stamps 
+print(len(name_set))
