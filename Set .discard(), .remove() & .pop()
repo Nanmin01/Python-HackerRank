@@ -1,0 +1,31 @@
+n = int(input())
+s = set(map(int, input().split()))
+
+#read the number of command as an integer and store 
+#it in num_command
+num_command = int(input())
+
+#initialize the variable command as a list
+command = list()
+
+
+#This for loop excecute, read the line and apply the command 
+#at the same time before going to the next line. 
+for _ in range(num_command):
+    
+    #Read the command as a string  and store it in the variable command
+    command = input().split()
+    
+    #command[0] is for the command and command[1] is for the integer
+    #do not forget to convert the string command[1] into an integer
+    #check the command[0] if it is "discard", "remove" apply the command
+    #with the integer in command[1]. else only pop
+    if command[0] == "discard":
+        s.discard(int(command[1]))
+    elif command[0] == "remove":
+        s.remove(int(command[1]))
+    else:
+        s.pop()
+
+#print the sum of the integer in s
+print(sum(s))
