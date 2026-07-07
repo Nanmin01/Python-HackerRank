@@ -1,0 +1,14 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+#import itertools librairy to use the permutation function
+from itertools import permutations
+
+#Read the string line and store the two input inside S , k
+S , k = input().split()
+
+#Use for loop to print the permuitation each on a new 
+#line. Permutations function turn the permutation 
+#into a tuple. We use join function to join the 
+# k string of permutation together.
+for p in permutations(sorted(S),int(k)):
+    print("".join(p))
