@@ -1,0 +1,18 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+#Import the library itertools and invoque the groupby function
+#to find the number of time a string appear in a string
+from itertools import groupby
+
+#read the line of input and store it inside S
+S = input()
+
+#This for loop has a key and a group.
+#key is an element of S
+#group every consecutive element after grouping S with 
+#the function groupby
+#len(list(group)) is the total number that an element key
+#appear in S
+#end = " " prevent the for loop to print on a new line
+for key, group in groupby(S):
+    print((len(list(group)), int(key)), end = " ")
