@@ -1,0 +1,31 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+#Import itertools and invoque the combinations() function
+from itertools import combinations
+
+#Read the lenght of the list input and store it inside the variable
+#n = length of a list
+n = int(input())
+
+#Input the next line and store it into list_of_element
+list_of_element = input().split()
+
+#Read the interator indices that determine the number of 
+#elements in a combination
+k = int(input())
+
+#find the list of all combinations using the conbination function
+all_combinations = list(combinations(list_of_element, k))
+
+#Initialize the count to 0
+count = 0
+
+#This for loop let c check the value in all combination
+#it compares it with a and increment the variable count
+for c in all_combinations:
+    if 'a' in c:
+        count += 1
+
+#The probability is the number of time "a" appear in all combination
+# which is count divided by the total number of all combinations
+print(count / len(all_combinations))
