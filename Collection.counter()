@@ -1,0 +1,34 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+#import collections library and invoque the counter function
+from collections import Counter
+
+#read the number of shoes and store it into the variable num_of_shoes
+num_of_shoes = int(input())
+
+#read the list of all shoes sizes  and store them in all_shoees_size
+all_shoes_size = list(map(int, input().split()))
+
+#read the number of customer and store them into num_of_cust
+num_of_cust = int(input())
+
+#turn the all shoes size into a counter dictionary
+coun_al_sho_sz = Counter(all_shoes_size)
+
+#initialise the  total amount of money to 0 
+total_money_earned = 0
+
+#Use the for loop  to loop over the number of customer
+# Second read the first line of key = size , value = price and store them into the variable
+#go directly to the first key in the dictionary and access the first size,value pair
+#make sure that the value is greater than 0
+#then add the price= value to the total ammount of money earned
+#decrement the corresponding value inside the dictionary
+for n in range(num_of_cust):
+    key , value = map(int, input().split())
+    if coun_al_sho_sz[key] > 0:
+        total_money_earned += value
+        coun_al_sho_sz[key]-= 1
+
+#print the total money earned  
+print(total_money_earned)
