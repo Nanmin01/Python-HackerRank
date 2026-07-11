@@ -1,0 +1,27 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+#import the library collections and invoque the function namedtuple 
+from collections import namedtuple
+
+#input the total number of student and store in total_num_stud
+total_num_stud = int(input())
+
+#initialize the total marks to 0
+total_marks = 0
+
+#input the first line containing the title
+#and store it in column
+column = input().split()
+
+#create a namedtuple students and insert the the column
+students = namedtuple('students', column)
+
+#This loop through the number of student and read every lines.
+#it links the parameters inside column to the input in order
+#also, it add all the students marks after converting it to int. 
+for i in range(total_num_stud):
+    student = students(*input().split())
+    total_marks += int(student.MARKS)
+
+#print the average which is the total number of marks over the total number of student 
+print(total_marks/total_num_stud)
