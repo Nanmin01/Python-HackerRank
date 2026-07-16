@@ -1,0 +1,13 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+#import cmath and invoque the function phase
+from cmath import phase
+
+#complex(input()) read the complex number and assign it to z= x+iy 
+z = complex(input())
+
+#abs = sqrt(x**2 + y**2)
+print(abs(z))
+
+#phase is to calculate the angle between x and y
+print(phase(z))
