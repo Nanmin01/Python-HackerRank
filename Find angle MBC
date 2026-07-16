@@ -1,0 +1,16 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+#Import the Math library and invoque the arc tangent and degree function
+from math import atan, degrees
+
+#Read ab and bc from the input and store tthem in their respective variables.
+ab = int(input())
+bc = int(input())
+
+#know that the angle MBC is equal to the angle BCA.
+#use the arctangent  to find the angle 
+#use degrees to convert from integer to degrees
+angle = degrees(atan(ab / bc))
+
+#print the angle round to the nearest integer.
+print(f"{round(angle)}\N{DEGREE SIGN}")
