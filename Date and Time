@@ -1,0 +1,46 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+#Import datetime 
+from datetime import datetime
+
+
+def time_delta(t1, t2):
+        
+    #datetime.strptime is a function that turn the string to a date
+    #a is a day of the week, d is the day, b is the month, y is the year
+    #H is the hour, M is the minute, S is the second, z is the time timezone
+    date1 = datetime.strptime(t1, "%a %d %b %Y %H:%M:%S %z")
+    date2 = datetime.strptime(t2, "%a %d %b %Y %H:%M:%S %z")
+
+    #find then absolute difference of date1 to date 2
+    difference = abs(int((date1 - date2).total_seconds()))
+    
+    #Print diferrence in int
+    print(difference)
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    t = int(input())
+
+    for t_itr in range(t):
+        t1 = input()
+
+        t2 = input()
+
+        delta = time_delta(t1, t2)
+        
+        #Hackerrank give an error with this sentences... Usually we just print 
+        #the result directly.. But here it prints into a file
+        #I do not know how to debug it.. But if you find the error 
+        #the debug answer is correct. Thanks.
+        fptr.write(str(delta) + '\n')
+
+    fptr.close()
