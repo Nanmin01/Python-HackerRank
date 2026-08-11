@@ -1,0 +1,17 @@
+#Import numpy and use the alias
+import numpy as np
+
+#Read the rows and the column and store them respectively in
+#n and m
+n , m = map(int, input().split())
+
+#This line use np and create an array.
+#the array comes from a covertion of a list of integer
+#We loop through the range until we reach n
+arr = np.array([list(map(int, input().split())) for _ in range(n)])
+
+#Find the minimum on the axis 1.
+Minimum = np.min(arr, axis = 1)
+
+#Print the max of the minimum on a line.
+print(np.max(Minimum))
