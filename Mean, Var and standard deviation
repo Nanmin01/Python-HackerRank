@@ -1,0 +1,20 @@
+#Import numpy and use the alias np
+import numpy as np 
+
+#Read the row and column and store them in  n and m.
+n , m  = map(int , input().split())
+
+#We use np to create an array which is a convertion of a list
+#of integers.
+arr = np.array([list(map(int , input().split())) for _ in range(n)])
+
+"""
+The three lines below calculates the mean,
+the variance and the standard deviation.
+HackerRank for the standard deviation stop 
+at the 11 decimal places. So we use round 
+function
+"""
+print(np.mean(arr, axis= 1))
+print(np.var(arr, axis= 0))
+print(np.std(arr).round(11))
