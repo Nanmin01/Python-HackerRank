@@ -1,0 +1,13 @@
+#import numpy and use his alias np
+import numpy as np 
+
+#read the input of rows and column and store it in n
+n = int(input())
+
+# A and B are array of intergers.
+# We loop until n
+A = np.array([list(map(int, input().split())) for _ in range(n)])
+B = np.array([list(map(int, input().split())) for _ in range(n)])
+ 
+#matmul is the matrix multiplication of A and B.
+print(np.matmul(A,B))
