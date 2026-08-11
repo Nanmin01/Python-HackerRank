@@ -1,0 +1,13 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+#Import Calendar Class
+import calendar
+
+#Read the input month, day, year and store them into month, day and year variable 
+month, day, year = map(int, input().split())
+
+#This line return an integer from 0 to 6. 0 is Monday and 6 is Sunday
+weekday = calendar.weekday(year, month, day)
+
+#Print the day_name in Capital letter
+print(calendar.day_name[weekday].upper())
