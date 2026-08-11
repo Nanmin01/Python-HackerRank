@@ -1,0 +1,19 @@
+#Import numpy (numerical python).. Numpy is a library that create array
+# and manipulate matrix. np is an alias but instead of np you can just do import numpy
+#and do numpy.array instead of np.array
+import numpy as np
+
+#read the rows and clomun and store it in n and m
+n, m = map(int, input().split())
+
+"""
+Using np we create an array coming from a list of integers
+We loop using the number of row
+"""
+arr = np.array([list(map(int, input().split())) for _ in range(n)])
+
+#Using the sum function on axis 0 in the 2D array
+result = np.sum(arr, axis=0)
+
+#Print the product of the result
+print(np.prod(result))
