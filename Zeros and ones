@@ -1,0 +1,13 @@
+#Import numpy and use np as alias
+import numpy as np 
+
+#This variable store the 3 3 3 meaning : 3 matrix with 3 lines and 3 columns
+# as a list
+shape = list(map(int, input().split()))
+
+#Theses 2 functions . zeros and ones takes the shape and the type which is int
+#here the shape is a 3x3x3 cube matrix. dtype means data types. 
+#the functions are easy to use because you only have to input
+#the matrix dimensions anss specify the type.
+print(np.zeros(shape, dtype=int))
+print(np.ones(shape, dtype=int))
