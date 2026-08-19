@@ -1,0 +1,11 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+#This line read the expression and input it in var
+var = input()
+
+#Eval here compute the expression print(2+3) and give 5
+#the correct expression is print(eval(var)) but the expression 
+#already contain print. So here eval(var) compute the expression
+#and print using the print expression.
+#you need to note that eval can be also an outer function.
+eval(var)
