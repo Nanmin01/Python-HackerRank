@@ -1,0 +1,11 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+#read the value of x and k and input them in their respectives variables
+x, k = map(int, input().split())
+
+#This line read the polynomial and store it inside the polynomial variable
+polynomial = input()
+
+#eval() evaluate the polynomial and replace x by it proper value
+# it return true or false.
+print(eval(polynomial) == k)
