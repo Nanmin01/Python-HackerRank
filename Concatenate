@@ -1,0 +1,18 @@
+#import numpy and use np as alias
+import numpy as np 
+
+#Read the input on a line and store it n, m for lines and p for column
+#map() can read 2 two multiple values in a single line and store it in vraiable
+#For multiple lines use for loop
+n, m , p = map(int, input().split())
+
+#This two lines read n and m lines of input and store in a numpy array 
+#for the for loop you only need the lines to loop
+#This is a list of integer that nump use as an array
+array_one = np.array( [list(map(int, input().split())) for _ in range(n)])
+array_two = np.array( [list(map(int, input().split())) for _ in range(m)])
+
+#This line concatenate the 2 arrays on an axis 0 and print it 
+#to the screen. You need to verify that they have same number of columns
+#for it to work
+print(np.concatenate((array_one, array_two), axis = 0))
