@@ -1,0 +1,20 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+#Import
+from __future__ import print_function
+import re
+
+#read the input and store it in T
+T = int(raw_input())
+
+#This for loop read the pattern and store it.
+#if the pattern is a regex and is present in the pattern
+#print true otherwise print false.
+for _ in range(T):
+    pattern = raw_input()
+
+    try:
+        re.compile(pattern)
+        print("True")
+    except re.error:
+        print("False")
