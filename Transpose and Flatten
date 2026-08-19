@@ -1,0 +1,14 @@
+#Import numpy and use np as alias
+import numpy as np 
+
+#read the lines and column and store them into n and m
+n , m = map(int, input().split())
+
+#use the inside for loop to loop until you reach n.
+#np is used to store the list of integer into an array
+#np is used for array in this case. 
+my_array = np.array([(list(map(int, input().split()))) for _ in range(n)])
+
+#The next two compute the transpose and the flatten
+print(np.transpose(my_array))
+print(my_array.flatten())
