@@ -1,0 +1,14 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+#Read the input T and store it
+T = int(input())
+
+#This for loop read the input a, b and print their integer division
+#take in consideration the error code and print it 
+#on the screen. ( as e , store the exception in variable e)
+for _ in range(T):
+    try:
+        a, b = map(int, input().split())
+        print(a // b)
+    except (ZeroDivisionError, ValueError) as e:
+        print("Error Code:", e)
