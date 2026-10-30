@@ -1,0 +1,12 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+#the 2 following lines input the integer a and b 
+#into variables a and b
+a = int(input())
+b = int(input())
+
+#The following 3 lines do the interger division, the modulo and the
+#divmod of a and b respectively
+print (a//b)
+print (a%b) 
+print(divmod(a,b))
