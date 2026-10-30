@@ -1,0 +1,30 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+#Import deque from collections
+from collections import deque
+
+#declare d as a deque
+d = deque()
+
+#n is to input the number of operations
+n = int(input())
+
+#This for loop is to find the command and do the operations
+for i in range(n):
+    command = input().split()
+
+    if command[0] == "append":
+        d.append(int(command[1]))
+
+    elif command[0] == "appendleft":
+        d.appendleft(int(command[1]))
+
+    elif command[0] == "pop":
+        d.pop()
+
+    elif command[0] == "popleft":
+        d.popleft()
+
+#This line print the deque d without the ([])
+#It unpack the deque and gives only the number inside
+print(*d)
