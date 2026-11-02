@@ -1,0 +1,13 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+#This line is to get the input a, b and m and store them in
+#variabke a, b, and m
+a = int(input())
+b = int(input())
+m = int (input())
+
+#This line print a to the power b
+print( pow(a,b))
+
+#This line print a to the power b mod m
+print(pow(a,b,m))
