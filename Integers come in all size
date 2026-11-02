@@ -1,0 +1,18 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+#get input a and store it in a
+a = int(input())
+
+#get the input of b and store it in b
+b = int(input())
+
+#get the input c and store in the variable c
+c = int(input())
+
+#get the input of d and store it in d
+d = int(input())
+
+#This line print the result of a to the power b
+#plus c to the power d
+
+print( pow(a,b) + pow(c,d))
