@@ -1,0 +1,35 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+#This first line read the number of elements in Set A
+#and input it in the variable a
+a = int(input())
+
+#this line read all the element in A and store them in set A
+A = set(map(int, input().split()))
+
+#this line store the number of the other set N and store it.
+N = int(input())
+
+
+#This for loop does the rest
+#this for loop range from 0 to N and get the command and the set into variable
+#command and B. 
+#The If statement look for the command in command[0] and check everything
+#it also does the calculation between both sets.  
+for i in range(N):
+    command = input().split()
+    B = set(map(int, input().split()))
+    
+    if command[0] == "intersection_update":
+        A.intersection_update(B)
+        
+    elif command[0] == "update":
+        A.update(B) 
+    
+    elif command[0] == "symmetric_difference_update":
+        A.symmetric_difference_update(B)  
+        
+    elif command[0] == "difference_update":
+        A.difference_update(B)  
+
+print(sum(A))
